@@ -15,14 +15,14 @@
 int main()
 {
 	char *buf = "#cisfun $ ";
-	int size = 100;
+	size_t size = 100;
 	char *string = NULL;
-	char *argv[] = {NULL};
-	char *envp[] = {NULL};
-	char *cmd;
+	const char* const argv[] = {NULL};
+	const char* const envp[] = {NULL};
+	const char *cmd;
 	pid_t pid;
 
-	while(1) //infinite loop
+	while(1)
 	{
 		write(1,buf,strlen(buf));
 		if(getline(&string,&size,stdin) == -1)
@@ -53,7 +53,7 @@ int main()
 		}
 		else
 		{
-			wait (NULL);
+			wait();
 		}
 	}
 	return 0;

@@ -2,6 +2,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <sys/wait.h>
 
 /**
  * main- It runs a simple shell that prompts the user to 
@@ -13,15 +14,13 @@
 
 int main()
 {
-	char *buf, *string, *cmd, *argv[], *envp[];
-	int size;
+	char *buf = "#cisfun $ ";
+	int size = 100;
+	char *string = NULL;
+	char *argv[] = {NULL};
+	char *envp[] = {NULL};
+	char *cmd;
 	pid_t pid;
-
-	buf = "#cisfun $ ";
-	size = 100;
-	string = NULL;
-	argv[] = {NULL};
-	envp[] = {NULL};
 
 	while(1) //infinite loop
 	{

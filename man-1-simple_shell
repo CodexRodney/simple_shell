@@ -1,0 +1,35 @@
+.\"Manpage for simple shell
+
+.\" Permission is granted to copy, distribute and /or modify this document 
+.\" Free document Licence ".
+
+.\" Contacts https://github.com/CodexRodney or https://github.com/goody-1 for more details.
+
+.TH man 1 "3 Nov 2021" "1.0" simple_shell man page"
+
+.SH NAME
+simple_shell \- a simple Unix command Interpreter.
+
+.SH SYNOPSIS
+simple_shell [options] [command_string | File]
+
+.SH DESCRIPTIONS
+Simple_shell is a command line interpreter that reads input from the stdinput and it interprets them and executes them.
+
+Simple_shell is inteded to be a replica of sh
+
+.SH OPTIONS
+Simple_shell takes no options But can run command with options.
+Example of those commands
+1. ls -la 
+2. rmdir --ignore-on-failure
+
+.SH SEE ALSO
+man sh
+
+.SH BUGS
+ still in construction but so far no identified Bugs. If so will be updated.
+
+.SH AUTHORS
+	RODNEY MWANJE
+	GOODNESS 

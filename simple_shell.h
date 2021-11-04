@@ -12,6 +12,8 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
+void print_prompt1(void);
+void print_prompt2(void);
 
 /* Advanced tasks */
 

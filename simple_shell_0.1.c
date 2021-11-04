@@ -5,7 +5,7 @@
 #include <sys/wait.h>
 
 /**
- * main- It runs a simple shell that prompts the user to 
+ * main- It runs a simple shell that prompts the user to
  *	a command and then it runs the command or display
  *	the error if command fails
  *
@@ -14,13 +14,14 @@
 
 int main()
 {
-	char *buf = "#cisfun $ ";
+	char *buf = "#cisfun$ ";
 	size_t size = 100;
 	char *string = NULL;
 	const char* const argv[] = {NULL};
 	const char* const envp[] = {NULL};
 	const char *cmd;
 	pid_t pid;
+	int status;
 
 	while(1)
 	{
@@ -53,7 +54,7 @@ int main()
 		}
 		else
 		{
-			wait();
+			wait(&status);
 		}
 	}
 	return 0;

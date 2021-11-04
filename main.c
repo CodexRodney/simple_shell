@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * main - main program for a simple shell
@@ -50,9 +49,9 @@ int execute(char **args)
 		exit(EXIT_SUCCESS);
 	}
 
-	if (strstr(args[0], bin) == NULL)
+	if (_strstr(args[0], bin) == NULL)
 	{
-		strcat(bin, store);
+		_strcat(bin, store);
 		pathname = bin;
 	}
 	else

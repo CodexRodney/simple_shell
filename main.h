@@ -26,5 +26,7 @@ void loop(void);
 int execute(char **args);
 int _strcmp(char *s1, char *s2);
 int my_execvp(char *name, char **argv);
+char *_strstr(register char *string, char *substring);
+char *_strcat(char *dest, char *src);
 
 #endif

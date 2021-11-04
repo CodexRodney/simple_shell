@@ -44,7 +44,11 @@ int execute(char **args)
 
 
 	if (_strcmp(args[0], "exit") == 0)
+	{
+		free(*args);
+		free(args);
 		exit(EXIT_SUCCESS);
+	}
 
 	if (strstr(args[0], bin) == NULL)
 	{
@@ -92,16 +96,15 @@ void loop(void)
 
 		if (nread == -1)
 		{
+			free(line);
 			_putchar('\n');
 			exit(EXIT_SUCCESS);
 		}
-
 		/* start again is nothing is entered */
 		if ((nread == 1 && line[0] == '\n') || line[0] == '\0')
 		{
 			continue;
 		}
-
 		args = split_line(line);
 		status = execute(args);
 		free(args);

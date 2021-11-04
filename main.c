@@ -65,8 +65,6 @@ int execute(char **args)
 		}
 		exit(EXIT_FAILURE);
 	}
-	else if (cpid < 0)
-		printf(RED "Error forking\n");
 	else
 		waitpid(cpid, &status, WUNTRACED);
 

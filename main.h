@@ -12,6 +12,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
+#include <errno.h>
 
 #define TOK_DELIM " \t\r\n"
 #define RED "\033[0;31m"

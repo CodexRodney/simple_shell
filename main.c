@@ -38,8 +38,6 @@ int execute(char **args)
 	int status;
 	char bin[1024] = "/bin/";
 	char *store = args[0], *pathname;
-	char *env_list[] = {"HOME=/home/goody", "PATH=/bin/", "USER=goody",
-	"LANGUAGE=en_NG:en", "SESSION=UBUNTU", "COMPIZ_CONFIG_PROFILE=ubuntu", NULL};
 
 
 	if (_strcmp(args[0], "exit") == 0)
@@ -60,7 +58,7 @@ int execute(char **args)
 	cpid = fork();
 	if (cpid == 0)
 	{
-		if (execve(pathname, args, env_list) < 0)
+		if (execve(pathname, args, NULL) < 0)
 		{
 			perror("./shell");
 			free(*args);

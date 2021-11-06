@@ -6,6 +6,8 @@
  * Return: always 0;
  */
 
+extern char **environ;
+
 int main(void)
 {
 
@@ -58,7 +60,7 @@ int execute(char **args)
 	cpid = fork();
 	if (cpid == 0)
 	{
-		if (execve(pathname, args, NULL) < 0)
+		if (execve(pathname, args, environ) < 0)
 		{
 			perror("./shell");
 			free(*args);

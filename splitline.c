@@ -11,7 +11,7 @@
 
 char **split_line(char *line)
 {
-	int buff_size = 1024, position = 0;
+	int buff_size = 1024, new_buff_size, position = 0;
 	char **tokens = malloc(buff_size * sizeof(char *));
 	char *token;
 
@@ -31,8 +31,9 @@ char **split_line(char *line)
 
 		if (position >= buff_size)
 		{
-			buff_size += 1024;
-			tokens = realloc(tokens, buff_size * sizeof(char *));
+			new_buff_size = buff_size + 1024;
+			tokens = _realloc(tokens, buff_size, new_buff_size * sizeof(char *));
+			buff_size = new_buff_size;
 
 			if (!tokens)
 			{

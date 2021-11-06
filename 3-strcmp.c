@@ -11,29 +11,19 @@
 * Return: a pointer to the resulting string dest;
 */
 
-
 int _strcmp(char *s1, char *s2)
 {
 	int i = 0, result;
 
 	while (s1[i] == s2[i] && s1[i] != '\0')
-	{
 		i++;
-	}
 
 	if (s1[i] < s2[i])
-	{
 		result = -15;
-	}
 	else if (s1[i] > s2[i])
-	{
 		result = 15;
-	}
 	else
-	{
 		result = 0;
-	}
 
 	return (result);
 }
-

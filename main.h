@@ -18,6 +18,7 @@
 #define RED "\033[0;31m"
 #define RESET "\e[0m"
 
+extern char **environ;
 
 int _putchar(char c);
 void print_prompt(void);
